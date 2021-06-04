@@ -1,0 +1,131 @@
+:root {
+  --bg-color: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #ed44aa,
+    #dc3abc,
+    #c339d0,
+    #9e3fe4,
+    #614af8
+  );
+  clip-path: circle(20% at 30% 20%);
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #ed44aa,
+    #dc3abc,
+    #c339d0,
+    #9e3fe4,
+    #614af8
+  );
+  clip-path: circle(10% at 60% 80%);
+}
+
+.container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  position: relative;
+  display: grid;
+}
+
+.container {
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: transparent;
+  color: rgb(207, 206, 206);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  grid-column: span 4;
+  height: 220px;
+  width: 300px;
+  text-align: right;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.temparature {
+    display: grid;
+    place-items: center;
+    width: 300px;
+    height: 110px;
+    font-size: 1.3rem;
+    grid-column: span 4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.temparature span{
+    display: grid;
+    place-items: center;
+}
+
+.temp-description{
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    place-items: center;
+    text-align: center;
+}
+
+
+@media (max-width : 760px){
+    .container{
+        height: 63vh;
+    width: 240px;
+    padding: 5px;
+    font-size: 1.2rem;
+    }
+}
