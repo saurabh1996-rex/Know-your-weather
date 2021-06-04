@@ -136,7 +136,7 @@ body::after {
 
 @media (max-width: 760px) {
   .container {
-    height: 63vh;
+    height: 50vh;
     width: 240px;
     padding: 5px;
     font-size: 1.2rem;
